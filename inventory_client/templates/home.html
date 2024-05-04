@@ -1,0 +1,118 @@
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Enter Item Name</h1>
+    <form method="post" action="{% url 'product_detail' %}"> <!-- Remove 'name=name' from action URL -->
+
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Enter item name">
+        <button type="submit">Search</button>
+    </form>
+
+    {% if message %}
+    <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html> {% endcomment %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #292929; /* Dark gray background */
+            color: #fff; /* White text */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 200px auto; /* Center the container vertically and horizontally */
+            padding: 20px;
+            background-color: #444; /* Darker gray container background */
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+
+        h1 {
+            text-align: center;
+            color: #007bff; /* Blue header text */
+            margin-top: 15px; /* Remove default margin */
+        }
+
+        form {
+            text-align: center;
+        }
+
+        input[type="text"] {
+            font-size: 18px;
+            width: 80%;
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 20px 25px;
+            background-color: #007bff; /* Blue button background */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        p {
+            text-align: center;
+            font-size: 25px;
+            margin-top: 25px;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px 0;
+            background-color: #333; /* Dark footer background */
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Inventory Tracking System</h1> <!-- Added title -->
+        <h2>Enter Item Name</h2>
+        <form method="post" action="{% url 'product_detail' %}">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Enter item name">
+            <button type="submit">Search</button>
+        </form>
+        {% if message %}
+        <p>{{ message }}</p>
+        {% endif %}
+    </div>
+    <div class="footer">
+        Developed by Siddharth R Bhardwaj<br>
+        Registration: 22112028<br>
+        Organization: CHRIST (Deemed to be University), Lavasa, Pune, India
+    </div>
+</body>
+</html>

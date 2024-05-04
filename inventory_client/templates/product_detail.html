@@ -1,0 +1,116 @@
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+</head>
+<body>
+    <h1>Product Detail</h1>
+    <ul>
+        <li>Name: {{ item.name }}</li>
+        <li>Description: {{ item.description }}</li>
+        <li>Quantity: {{ item.quantity }}</li>
+        <li>Price: {{ item.price }}</li>
+        <li>Stock Availability: {{ item.stock_availibility }}</li>
+    </ul>
+</body>
+</html> {% endcomment %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #292929; /* Dark gray background */
+            color: #fff; /* White text */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: 150px auto;
+            padding: 25px;
+            background-color: #444; /* Darker gray container background */
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff; /* Blue header text */
+            margin-top: 0; /* Remove default margin */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 15px;
+            font-size: 20px;
+            text-align: left;
+            border-bottom: 1px solid #fff; /* White border between rows */
+        }
+
+        th {
+            background-color: #007bff; /* Blue header background */
+            color: #fff; /* White text */
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px 0;
+            background-color: #333; /* Dark footer background */
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Product Detail</h1>
+        <table>
+            <tr>
+                <th>Attribute</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>{{ item.name }}</td>
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td>{{ item.description }}</td>
+            </tr>
+            <tr>
+                <td>Quantity</td>
+                <td>{{ item.quantity }}</td>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td>{{ item.price }}</td>
+            </tr>
+            <tr>
+                <td>Stock Availability</td>
+                <td>{{ item.stock_availibility }}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="footer">
+        Developed by Siddharth R Bhardwaj<br>
+        Registration: 22112028<br>
+        Organization: CHRIST (Deemed to be University), Lavasa, Pune, India
+    </div>
+</body>
+</html>
